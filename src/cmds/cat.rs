@@ -30,7 +30,7 @@ fn file_is_exist(file_path: &str) -> bool {
     }
 }
 
-pub fn mmap_read_file(file_path: &str) -> Result<(), io::Error> {
+fn mmap_read_file(file_path: &str) -> Result<(), io::Error> {
     let file_target = File::open(file_path).map_err(|error| {
         eprintln!("Error when opening file: {}", error);
         error
