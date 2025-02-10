@@ -1,4 +1,5 @@
 use crate::cli::{Cli, Commands};
+use crate::cmds::cat::cat_command;
 use clap::Parser;
 
 pub fn handles_commands() {
@@ -6,7 +7,7 @@ pub fn handles_commands() {
 
     match args.commands {
         Commands::Cat { file_path } => {
-            println!("File Path is: {}", file_path);
+            cat_command(&file_path);
         }
     }
 }
