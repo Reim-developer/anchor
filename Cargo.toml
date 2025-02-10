@@ -1,0 +1,8 @@
+[package]
+name = "anchor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.28", features = ["derive"] }
+owo-colors = "4.1.0"
