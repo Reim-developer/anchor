@@ -5,4 +5,5 @@ edition = "2021"
 
 [dependencies]
 clap = { version = "4.5.28", features = ["derive"] }
+memmap2 = "0.9.5"
 owo-colors = "4.1.0"
