@@ -4,7 +4,7 @@
 mod cli;
 mod cmds;
 mod core;
-mod ultis;
+mod utils;
 
 use cmds::handles::handles_commands;
 
