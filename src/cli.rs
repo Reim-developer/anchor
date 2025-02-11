@@ -14,7 +14,20 @@ pub struct Cli {
 pub enum Commands {
     #[command(name = "cat")]
     Cat {
-        #[arg(short, long = "file", help = "The file path you want show content")]
+        #[arg(short, long = "file", help = "Show all content in file")]
         file_path: String,
+    },
+
+    #[command(name = "hash")]
+    Hash {
+        #[arg(short, long = "file", help = "Show hash of file")]
+        file_path: String,
+        #[arg(
+            short,
+            long = "debug",
+            help = "Enable debug file",
+            default_value = "false"
+        )]
+        debug: bool,
     },
 }
