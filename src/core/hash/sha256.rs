@@ -27,5 +27,5 @@ pub fn check_sha256(file_path: &str) -> String {
     let mut sha256 = sha2::Sha256::new();
     sha256.update(&mmap_file);
 
-    format!("{} SHA256: {:x}", info_color, sha256.finalize())
+    format!("{} SHA256: {:x}\n", info_color, sha256.finalize())
 }
