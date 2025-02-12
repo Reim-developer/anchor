@@ -16,8 +16,7 @@ where
     {
         Ok(style) => status_bar.set_style(style),
         Err(error) => {
-            eprintln!("{} Failed to set process bar: {}", error_color, error);
-            return;
+            eprintln!("{} Failed to set process bar: {}", error_color, error)
         }
     }
 
