@@ -1,4 +1,4 @@
-use crate::utils::colors::LogLevel;
+use crate::utils::styles::colors::LogLevel;
 use memmap2::{self, Mmap};
 use sha1::{Digest, Sha1};
 use std::fs::File;
