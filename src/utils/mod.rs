@@ -1,6 +1,4 @@
-pub mod cant_read;
-pub mod colors;
-pub mod file_exist;
+pub mod file;
 pub mod help_msg;
-pub mod is_dir;
+pub mod styles;
 pub mod time;
