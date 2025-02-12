@@ -11,8 +11,7 @@ pub fn handles_commands() {
             cat_command(&file_path);
         }
         Commands::Hash { file_path, debug } => {
-            hash_command(&file_path);
-            println!("{}", debug);
+            hash_command(&file_path, debug);
         }
     }
 }
