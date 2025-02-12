@@ -1,5 +1,5 @@
-use crate::core::md5::check_md5;
-use crate::core::sha1::check_sha1;
+use crate::core::hash::md5::check_md5;
+use crate::core::hash::sha1::check_sha1;
 use crate::utils::file::can_read::can_read_file;
 use crate::utils::file::file_exist::file_is_exist;
 use crate::utils::file::is_dir::is_directory;
