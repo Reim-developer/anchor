@@ -1,6 +1,6 @@
-use crate::utils::file_exist::file_is_exist;
-use crate::utils::is_dir::is_directory;
-use crate::utils::time::cal_time;
+use crate::utils::file::file_exist::file_is_exist;
+use crate::utils::file::is_dir::is_directory;
+use crate::utils::time::time_calc::cal_time;
 use memmap2::Mmap;
 use std::error::Error;
 use std::fs::File;
