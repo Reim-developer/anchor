@@ -22,7 +22,7 @@ pub fn hash_command(file_path: &str, is_debug_mode: bool) {
         result.push_str(&md5);
         result.push_str(&sha1);
         result.push_str(&sha256);
-        result.push_str(&sha512);        
+        result.push_str(&sha512);
         result.push_str(&debug_mode(is_debug_mode, &result));
         result
     });
