@@ -30,9 +30,9 @@ pub enum Commands {
         )]
         debug: bool,
     },
-    #[command(name = "json")]
-    Json {
-        #[arg(short, long = "file", help = "Format JSON file")]
+    #[command(name = "fmt")]
+    Fmt {
+        #[arg(short = 'f', long = "file", help = "Format file")]
         file_path: String,
     },
 }
