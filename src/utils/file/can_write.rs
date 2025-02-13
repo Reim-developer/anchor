@@ -6,9 +6,12 @@ pub fn can_write_file(file_path: &str) -> String {
     let info_color = LogLevel::Info.fmt();
 
     match OpenOptions::new().write(true).open(file_path) {
-        Ok(_) => format!("{} Checking write permission ... Done!", info_color),
+        Ok(_) => format!("{} Checking write permission ... Done!\n", info_color),
         Err(error) => {
-            format!("{} Can't write log file with error {}", error_color, error)
+            format!(
+                "{} Can't write log file with error {}\n",
+                error_color, error
+            )
         }
     }
 }
