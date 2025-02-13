@@ -23,7 +23,7 @@ where
     status_bar.set_message("Processing....");
     status_bar.enable_steady_tick(Duration::from_millis(100));
 
-    let info_color = LogLevel::Info.fmt();
+    let success_color = LogLevel::Success.fmt();
     let start = Instant::now();
 
     let result = func();
@@ -32,5 +32,5 @@ where
     let end_time = start.elapsed();
 
     status_bar.println(result);
-    status_bar.println(format!("{} Finished in {:.2?}", info_color, end_time));
+    status_bar.println(format!("{} Finished in {:.2?}", success_color, end_time));
 }
