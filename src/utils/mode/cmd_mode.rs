@@ -21,7 +21,13 @@ pub fn debug_mode(is_debug: bool, content: &String) -> String {
     );
     let (write_check, write_task) = join(
         || can_write_file("hash_log.txt"),
-        || write_file("hash_log.txt", content),
+        || {
+            write_file(
+                "hash_log.txt",
+                content,
+                "Successfully write all bytes to file!",
+            )
+        },
     );
 
     result.push_str(&create_check);
