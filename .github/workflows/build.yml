@@ -19,7 +19,7 @@ jobs:
     - name: Build
       run: cargo build --verbose
     - name: Upload Release Binary
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v2
       with:
         name: rust-binary
         path: target/release/anchor
