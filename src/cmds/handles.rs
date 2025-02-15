@@ -1,6 +1,6 @@
 use crate::cli::{Cli, Commands};
 use crate::cmds::cat::cat_command;
-use crate::cmds::fmt::json::fmt;
+use crate::cmds::fmt::fmt::fmt;
 use crate::cmds::hash::hash_command;
 use clap::Parser;
 
