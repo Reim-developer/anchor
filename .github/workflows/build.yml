@@ -18,3 +18,8 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build
       run: cargo build --verbose
+    - name: Upload Release Binary
+      uses: actions/upload-artifact@v3
+      with:
+        name: rust-binary
+        path: target/release/anchor
