@@ -1,5 +1,6 @@
 use super::get_exts::get_file_ext;
 use crate::core::formats::json_fmt::json_formatter;
+use crate::core::formats::markdown_fmt::markdown_format;
 use crate::core::formats::xml_fmt::format_xml;
 use crate::core::formats::yaml_fmt::yaml_fmt;
 
@@ -7,6 +8,7 @@ pub enum FileTypes {
     Json,
     Xml,
     Yaml,
+    Markdown,
     Unknow,
 }
 
@@ -16,6 +18,7 @@ impl FileTypes {
             "json" => Self::Json,
             "xml" => Self::Xml,
             "yml" => Self::Yaml,
+            "md" => Self::Markdown,
             _ => Self::Unknow,
         }
     }
@@ -25,6 +28,7 @@ impl FileTypes {
             Self::Json => json_formatter(file_path),
             Self::Xml => format_xml(file_path),
             Self::Yaml => yaml_fmt(file_path),
+            Self::Markdown => markdown_format(file_path),
             Self::Unknow => format!("Unknow file extension, skipping.."),
         }
     }
